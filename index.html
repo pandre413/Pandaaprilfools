@@ -6,21 +6,38 @@
     <title>Panda April Fools</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #f0e68c, #f73a68);
+            font-family: Arial, sans-serif;
         }
-        h1 {
-            color: #2c3e50;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .circle { width: 100px; height: 100px; background: #ffcc00; }
+        .triangle { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 100px solid #4dab94; }
+        .svg-illustration { 
+            position: absolute; 
+            width: 200px; 
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Panda April Fools!</h1>
-    <p>Stay tuned for more fun!</p>
+    <div class="shape circle" style="top: 20%; left: 10%;"></div>
+    <div class="shape triangle" style="top: 50%; left: 30%;"></div>
+    <img class="svg-illustration" src="illustration.svg" alt="Fun Illustration" style="top: 10%; right: 10%;">
+    <script>
+        // Optional JavaScript for interactive elements
+    </script>
 </body>
 </html>
