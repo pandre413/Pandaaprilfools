@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April Fool's Prank</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, pink, lightpink);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            border: 2px dashed white;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        h1 {
+            animation: bounce 1s infinite;
+            font-size: 2.5em;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Gotcha! 💗</h1>
+        <p>This is your April Fool's prank! Hope you enjoyed it!</p>
+    </div>
+</body>
+</html>
