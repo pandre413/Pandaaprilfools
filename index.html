@@ -1,73 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Shapes and Animations</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f8ff;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-        }
-        .shape {
-            position: absolute;
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-20px); }
-        }
-        .circle {
-            width: 50px;
-            height: 50px;
-            background-color: #ff7f50;
-            border-radius: 50%;
-        }
-        .triangle {
-            width: 0;
-            height: 0;
-            border-left: 25px solid transparent;
-            border-right: 25px solid transparent;
-            border-bottom: 50px solid #4caf50;
-        }
-        h1 {
-            position: absolute;
-            top: 50px;
-            font-size: 2.5em;
-            color: #ff6347;
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-            animation: text-float 3s ease-in-out infinite;
-        }
-        @keyframes text-float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", "Poppins", sans-serif;
+    background: linear-gradient(180deg, #e9b7bd 40%, #f5f1eb 40%);
+  }
+
+  .card {
+    background: #f5f1eb;
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    max-width: 350px;
+    position: relative;
+  }
+
+  h1 {
+    color: #4f5d53;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #6b7a70;
+    font-size: 1.1em;
+  }
+
+  .emoji {
+    font-size: 2em;
+    margin-bottom: 10px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* floating hearts */
+  .heart {
+    position: absolute;
+    color: #e9b7bd;
+    font-size: 1.2em;
+    animation: rise 6s infinite ease-in;
+  }
+
+  @keyframes rise {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-120px);
+      opacity: 0;
+    }
+  }
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Fun Shapes and Animations!</h1>
-    <div class="shape circle" style="top: 100px; left: 100px;"></div>
-    <div class="shape circle" style="top: 500px; left: 300px;"></div>
-    <div class="shape triangle" style="top: 300px; left: 600px;"></div>
-    <script>
-        function createRandomShapes() {
-            const shapes = ['circle', 'triangle'];
-            for (let i = 0; i < 10; i++) {
-                const shape = document.createElement('div');
-                const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
-                shape.classList.add('shape', shapeType);
-                shape.style.top = Math.random() * window.innerHeight + 'px';
-                shape.style.left = Math.random() * window.innerWidth + 'px';
-                document.body.appendChild(shape);
-            }
-        }
-        createRandomShapes();
-    </script>
+
+<div class="card">
+  <div class="emoji">🎀✨</div>
+  <h1>Gotcha! 😄</h1>
+  <p>Happy April Fool's!<br>It's a prank 💗</p>
+
+  <!-- floating hearts -->
+  <div class="heart" style="left:10%; animation-delay:0s;">💗</div>
+  <div class="heart" style="left:80%; animation-delay:2s;">💗</div>
+  <div class="heart" style="left:50%; animation-delay:4s;">💗</div>
+</div>
+
 </body>
 </html>
